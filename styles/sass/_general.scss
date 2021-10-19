@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 html {
 	font-size: 125%;
@@ -9,6 +9,7 @@ html {
 body {
 	background: linear-gradient(-45deg, $tertiaryColor 0%, $secondaryColor 70%);
 	background-size: 300% 100%;
+	z-index: -2;
 }
 .container,
 body {
@@ -75,9 +76,6 @@ main .wrapper {
 		border-radius: 20px;
 	}
 }
-main .wrapper.outOfSight {
-	display: none;
-}
 nav ul {
 	height: 500px;
 	width: 100px;
@@ -91,20 +89,65 @@ nav ul {
 	width: 40vw;
 	justify-content: space-between;
 }
+// main {
+// 	height: 80vh;
+// 	width: 60vw;
+// }
 main .wrapper {
 	height: 80vh;
 	width: 47.5vw;
 }
 a,
 .navButton,
-.navButton i, a i {
+.navButton i,
+a i {
 	color: $fontSecondaryColor;
 	text-decoration: none;
 }
 li:hover > .navButton > i,
 li:hover > .navButton,
 li:hover > a > i,
-li:hover > a, 
-.currentButton, .currentButton i {
+li:hover > a,
+.currentButton,
+.currentButton i {
 	color: $primaryColor;
 }
+main .wrapper.outOfSight {
+	display: none;
+}
+// main .wrapper.intoSight {
+// 	position: relative;
+// 	opacity: 1;
+// 	animation: fadeIn 3s;
+// }
+
+// @keyframes fadeIn {
+// 	from {
+// 		opacity: 0;
+// 		// left: 400;
+// 		width: 0;
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		width: 47.5vw;
+// 		// left: 0px;
+// 	}
+// }
+// main .wrapper.outOfSight {
+// 	position: absolute;
+// 	opacity: 0;
+// 	animation: fadeOut 3s;
+// }
+
+// @keyframes fadeOut {
+// 	from {
+// 		opacity: 1;
+// 		// left: 0;
+// 		width: 47.5vw;
+// 	}
+// 	to {
+// 		opacity: 0;
+// 		width: 0;
+// 		// left: -400px;
+// 	}
+// }

@@ -20,6 +20,7 @@ app.navigateTo = (event, goTo) => {
 		if (element.classList.contains(goTo))
 		{
 			element.classList.remove('aria-hidden', 'outOfSight')
+			element.classList.add('intoSight')
 		} else {
 			if (!element.classList.contains('outOfSight'))
 			{
@@ -28,6 +29,10 @@ app.navigateTo = (event, goTo) => {
 			if (!element.classList.contains('aria-hidden'))
 			{
 				element.classList.add('aria-hidden')
+			}
+			if (element.classList.contains('intoSight'))
+			{
+				element.classList.remove('intoSight')
 			}
 		}
 	})

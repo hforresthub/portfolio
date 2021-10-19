@@ -1,0 +1,92 @@
+
+.boxAnimation1,
+.boxAnimation2,
+.boxAnimation3,
+.boxAnimation4,
+.boxAnimation5 {
+	position: fixed;
+	background: $tertiaryColorTransparent;
+	z-index: -1;
+}
+.boxAnimation1 {
+	height: 200px;
+	width: 200px;
+	animation: meander1 5s alternate infinite, spinning 30s infinite, upping 30s infinite;
+}
+.boxAnimation2 {
+	height: 100px;
+	width: 100px;
+	animation: meander2 15s alternate infinite, spinning 3s infinite, upping 26s infinite;
+}
+.boxAnimation3 {
+	height: 50px;
+	width: 50px;
+	animation: meander3 8s alternate infinite, spinning 50s infinite, upping 20s infinite;
+}
+.boxAnimation4 {
+	height: 300px;
+	width: 300px;
+	animation: meander4 5s alternate infinite, spinning 12s infinite, upping 37s infinite;
+}
+.boxAnimation5 {
+	height: 150px;
+	width: 150px;
+	animation: meander5 2s alternate infinite, spinning 30s infinite, upping 16s infinite;
+}
+@keyframes meander1 {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 10vw;
+	}
+}
+@keyframes meander2 {
+	0% {
+		left: 10vw;
+	}
+	100% {
+		left: 20vw;
+	}
+}
+@keyframes meander3 {
+	0% {
+		left: 20vw;
+	}
+	100% {
+		left: 10vw;
+	}
+}
+@keyframes meander4 {
+	0% {
+		left: 40vw;
+	}
+	100% {
+		left: 60vw;
+	}
+}
+@keyframes meander5 {
+	0% {
+		left: 90vw;
+	}
+	100% {
+		left: 30vw;
+	}
+}
+@keyframes spinning {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes upping {
+	0% {
+		bottom: -30vh;
+	}
+	100% {
+		bottom: 130vh;
+	}
+}
+
