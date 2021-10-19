@@ -6,6 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/23e7836e86.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./styles/styles.css">
 	</link>
 	<title>Hal's Portfolio</title>
@@ -17,39 +20,110 @@
 		<header>
 			<div class="wrapper">
 				<nav>
-					<ul>
-						<li><a href=""><i class="fas fa-address-card" aria-hidden="true"></i><span>About</span></a></li>
-						<li><a href=""><i class="fas fa-toolbox" aria-hidden="true"></i><span>Skills</span></a></li>
-						<li><a href=""><i class="fas fa-project-diagram" aria-hidden="true"></i><span>Projects</span></a></li>
-						<li><a href=""><i class="fas fa-at" aria-hidden="true"></i><span>Contact</span></a></li>
+					<ul class="navBar">
+						<li role="button" tabindex=0>
+							<div class="navButton aboutButton"><i class="fas fa-address-card"
+									aria-hidden="true"></i><span>About</span></div>
+						</li>
+						<li role="button" tabindex=0>
+							<div class="navButton skillsButton"><i class="fas fa-toolbox"
+									aria-hidden="true"></i><span>Skills</span></div>
+						</li>
+						<li role="button" tabindex=0>
+							<div class="navButton projectsButton"><i class="fas fa-project-diagram"
+									aria-hidden="true"></i><span>Projects</span></div>
+						</li>
+						<li role="button" tabindex=0>
+							<div class="navButton contactButton"><i class="fas fa-at"
+									aria-hidden="true"></i><span>Contact</span></div>
+						</li>
 					</ul>
 				</nav>
 				<div class="headerCard wrapper">
-					<div class="imgContainer">
+					<div class="backImgContainer">
+					</div>
+					<div class="profileImg imgContainer">
 						<img src="https://placekitten.com/300/300" alt="">
 					</div>
 					<h1>Hal Forrest</h1>
 					<h2>Web Developer</h2>
 					<ul>
-						<li><a href=""><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-						<li><a href=""><i class="fab fa-github-square" aria-hidden="true"></i></a></li>
-						<li><a href=""><i class="fab fa-twitter-square" aria-hidden="true"></i></a></li>
+						<li role="button" tabindex=0><a href=""><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+						</li>
+						<li role="button" tabindex=0><a href=""><i class="fab fa-github-square"
+									aria-hidden="true"></i></a></li>
+						<li role="button" tabindex=0><a href=""><i class="fab fa-twitter-square"
+									aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
 			</div>
 		</header>
 
 		<main>
-			<div class="wrapper">
+			<div class="wrapper aboutContent">
 				<h3>About Me</h3>
 				<p>I am Hal Forrest, web developer from Ontario, Canada. I have a passion for continuously learning and
-					writing responsive code that is accessible to all.  Also I'm currently a cat, as you can see from my picture.</p>
+					writing responsive code that is accessible to all. Also I'm currently a cat, as you can see from my
+					picture.</p>
+				<p>Services</p>
+				<p>Fun facts</p>
+				<p>Cat facts</p>
+				<p>Dog facts</p>
+				<p>Lions</p>
+				<h3>Test</h3>
+				<p>Tigers</p>
+				<p>and</p>
+				<p>Bears</p>
+				<p>Services</p>
+				<p>Fun facts</p>
+				<p>Cat facts</p>
+				<p>Dog facts</p>
+				<p>Lions</p>
+				<p>Tigers</p>
+				<p>and</p>
+				<p>Bears</p>
+				<p>Services</p>
+				<p>Fun facts</p>
+				<p>Cat facts</p>
+				<p>Dog facts</p>
+				<p>Lions</p>
+				<p>Tigers</p>
+				<p>and</p>
+				<p>Bears</p>
+				<p>Services</p>
+				<p>Fun facts</p>
+				<p>Cat facts</p>
+				<p>Dog facts</p>
+				<p>Lions</p>
+				<p>Tigers</p>
+				<p>and</p>
+				<p>Bears</p>
+			</div>
+			<div class="wrapper skillsContent aria-hidden outOfSight">
+				<h3>MY skills</h3>
+				<p>Fun facts</p>
+				<p>Cat facts</p>
+				<p>Dog facts</p>
+				<p>Lions</p>
+				<p>Tigers</p>
+				<p>and</p>
+				<p>Bears</p>
+			</div>
+			<div class="wrapper projectsContent aria-hidden outOfSight">
+				<h3>My Projects</h3>
+				<p>My projects will go here!</p>
+			</div>
+			<div class="wrapper contactContent aria-hidden outOfSight">
+				<h3>Contact information</h3>
+				<p>My contact details will go here!</p>
 			</div>
 		</main>
 
 		<footer>
 
 		</footer>
+
+		<script src="./js/script.js"></script>
 	</div>
 </body>
 

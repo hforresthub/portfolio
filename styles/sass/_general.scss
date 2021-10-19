@@ -1,20 +1,33 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: 'Poppins', sans-serif;
 }
 html {
 	font-size: 125%;
 }
-.container, body {
-	color: $fontPrimaryColor;
-	background-color: $secondaryColor;
+body {
+	background: linear-gradient(-45deg, $tertiaryColor 0%, $secondaryColor 70%);
+	background-size: 300% 100%;
 }
-div, ul, li, a {
+.container,
+body {
+	color: $fontPrimaryColor;
+}
+div,
+ul,
+li,
+a,
+.navButton {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
-nav ul, .headerCard, main .wrapper, a {
+nav ul,
+.headerCard,
+main .wrapper,
+a,
+.navButton {
 	flex-direction: column;
 }
 .container {
@@ -30,33 +43,67 @@ header nav {
 ul {
 	list-style: none;
 }
-nav ul, .headerCard, main .wrapper {
+nav ul,
+.headerCard,
+main .wrapper {
 	border-radius: 6px;
+	background-color: $quaternaryColor;
+}
+main {
+	border-radius: 0 6px 6px 0;
 	background-color: $quaternaryColor;
 }
 main .wrapper {
 	border-radius: 0 6px 6px 0;
+	justify-content: flex-start;
+	overflow-y: scroll;
+	scrollbar-color: $primaryColor $quaternaryColor;
+	scrollbar-width: thin;
+	margin: 5px 0;
+	p {
+		padding: 1rem;
+	}
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $septenaryColor;
+		border-radius: 20px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: $primaryColor;
+		border-radius: 20px;
+	}
+}
+main .wrapper.outOfSight {
+	display: none;
 }
 nav ul {
-	height: 70vh;
-	width: 6vw;
+	height: 500px;
+	width: 100px;
 	position: relative;
 	z-index: 1;
 }
 .headerCard {
 	background-color: $quinaryColor;
-	box-shadow: -1rem -1rem 0 $tertiaryColor;
+	box-shadow: -1rem -1rem 0 $tertiaryColorTransparent;
 	height: 90vh;
 	width: 40vw;
+	justify-content: space-between;
 }
 main .wrapper {
 	height: 80vh;
 	width: 47.5vw;
 }
-a, a i {
-	color: $primaryColor;
+a,
+.navButton,
+.navButton i, a i {
+	color: $fontSecondaryColor;
 	text-decoration: none;
 }
-img {
-	border-radius: 50%;
+li:hover > .navButton > i,
+li:hover > .navButton,
+li:hover > a > i,
+li:hover > a {
+	color: $primaryColor;
 }
