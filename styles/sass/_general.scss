@@ -104,6 +104,7 @@ a,
 li:hover > .navButton > i,
 li:hover > .navButton,
 li:hover > a > i,
-li:hover > a {
+li:hover > a, 
+.currentButton, .currentButton i {
 	color: $primaryColor;
 }
