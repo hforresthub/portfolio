@@ -347,7 +347,7 @@ main .wrapper::-webkit-scrollbar {
   width: 5px;
 }
 main .wrapper::-webkit-scrollbar-thumb {
-  background-color: #444a5e;
+  background-color: #c3dfcd;
   border-radius: 20px;
 }
 main .wrapper::-webkit-scrollbar-thumb:hover {
