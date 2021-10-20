@@ -3,7 +3,8 @@
 .boxAnimation2,
 .boxAnimation3,
 .boxAnimation4,
-.boxAnimation5 {
+.boxAnimation5,
+.boxAnimation6 {
 	position: fixed;
 	background: $tertiaryColorTransparent;
 	z-index: -1;
@@ -31,7 +32,12 @@
 .boxAnimation5 {
 	height: 150px;
 	width: 150px;
-	animation: meander5 2s alternate infinite, spinning 30s infinite, upping 16s infinite;
+	animation: meander5 20s alternate infinite, spinning 30s infinite, upping 16s infinite;
+}
+.boxAnimation6 {
+	height: 250px;
+	width: 250px;
+	animation: meander6 10s alternate infinite, spinning 10s infinite, upping 10s infinite;
 }
 @keyframes meander1 {
 	0% {
@@ -73,6 +79,14 @@
 		left: 30vw;
 	}
 }
+@keyframes meander6 {
+	0% {
+		left: 80vw;
+	}
+	100% {
+		left: 90vw;
+	}
+}
 @keyframes spinning {
 	0% {
 		transform: rotate(0deg);
@@ -86,7 +100,43 @@
 		bottom: -30vh;
 	}
 	100% {
-		bottom: 130vh;
+		bottom: 120vh;
 	}
 }
 
+// main .wrapper.intoSight {
+// 	position: relative;
+// 	opacity: 1;
+// 	animation: fadeIn 3s;
+// }
+
+// @keyframes fadeIn {
+// 	from {
+// 		opacity: 0;
+// 		// left: 400;
+// 		width: 0;
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		width: 47.5vw;
+// 		// left: 0px;
+// 	}
+// }
+// main .wrapper.outOfSight {
+// 	position: absolute;
+// 	opacity: 0;
+// 	animation: fadeOut 3s;
+// }
+
+// @keyframes fadeOut {
+// 	from {
+// 		opacity: 1;
+// 		// left: 0;
+// 		width: 47.5vw;
+// 	}
+// 	to {
+// 		opacity: 0;
+// 		width: 0;
+// 		// left: -400px;
+// 	}
+// }

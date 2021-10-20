@@ -244,8 +244,8 @@ html {
 }
 
 body {
-  background: linear-gradient(-45deg, #22272f 0%, #1b1f25 70%);
-  background-size: 300% 100%;
+  background: linear-gradient(-45deg, #22272f 0%, #1b1f25 100%);
+  background-size: 100% 200%;
   z-index: -2;
 }
 
@@ -269,11 +269,28 @@ a,
           align-items: center;
 }
 
+.skillsContent li {
+  width: 30%;
+  text-align: center;
+  padding: 1rem;
+}
+.skillsContent li:hover {
+  color: #c3dfcd;
+}
+.skillsContent li i {
+  font-size: 2rem;
+}
+
+.skillsContent ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 nav ul,
 .headerCard,
 main .wrapper,
 a,
-.navButton {
+.navButton, .skillsContent li {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -382,6 +399,15 @@ main .wrapper.outOfSight {
   display: none;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 p {
   font-weight: 200;
 }
@@ -390,7 +416,8 @@ p {
 .boxAnimation2,
 .boxAnimation3,
 .boxAnimation4,
-.boxAnimation5 {
+.boxAnimation5,
+.boxAnimation6 {
   position: fixed;
   background: #24272e83;
   z-index: -1;
@@ -427,8 +454,15 @@ p {
 .boxAnimation5 {
   height: 150px;
   width: 150px;
-  -webkit-animation: meander5 2s alternate infinite, spinning 30s infinite, upping 16s infinite;
-          animation: meander5 2s alternate infinite, spinning 30s infinite, upping 16s infinite;
+  -webkit-animation: meander5 20s alternate infinite, spinning 30s infinite, upping 16s infinite;
+          animation: meander5 20s alternate infinite, spinning 30s infinite, upping 16s infinite;
+}
+
+.boxAnimation6 {
+  height: 250px;
+  width: 250px;
+  -webkit-animation: meander6 10s alternate infinite, spinning 10s infinite, upping 10s infinite;
+          animation: meander6 10s alternate infinite, spinning 10s infinite, upping 10s infinite;
 }
 
 @-webkit-keyframes meander1 {
@@ -512,6 +546,22 @@ p {
     left: 30vw;
   }
 }
+@-webkit-keyframes meander6 {
+  0% {
+    left: 80vw;
+  }
+  100% {
+    left: 90vw;
+  }
+}
+@keyframes meander6 {
+  0% {
+    left: 80vw;
+  }
+  100% {
+    left: 90vw;
+  }
+}
 @-webkit-keyframes spinning {
   0% {
     -webkit-transform: rotate(0deg);
@@ -537,7 +587,7 @@ p {
     bottom: -30vh;
   }
   100% {
-    bottom: 130vh;
+    bottom: 120vh;
   }
 }
 @keyframes upping {
@@ -545,7 +595,7 @@ p {
     bottom: -30vh;
   }
   100% {
-    bottom: 130vh;
+    bottom: 120vh;
   }
 }
 li {
@@ -572,7 +622,20 @@ a i {
   cursor: pointer;
 }
 
+.navButton i,
+a i {
+  padding: 1rem 0.25rem 0 0.25rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+a i {
+  padding: 0rem 0.25rem 1rem 0.25rem;
+}
+
 nav ul li a::before,
+.project h4::before,
 nav ul li .navButton::before {
   content: "";
   background: radial-gradient(ellipse at top, #444a5e 0%, #30323b 80%);
@@ -653,25 +716,122 @@ h3 {
   position: relative;
   padding: 2rem;
   z-index: 1;
+  font-size: 2rem;
 }
 h3::before {
   content: " ";
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   display: inline-block;
   background: linear-gradient(135deg, #00ad4249, rgba(0, 0, 0, 0));
   position: absolute;
-  top: 2rem;
-  left: 1.4rem;
+  top: 1.5rem;
+  left: 1rem;
   z-index: -1;
 }
 
-h3::after {
+h3::after, .project::before {
   content: "";
   background: radial-gradient(ellipse at top, #444a5e 0%, #30323b 80%);
   width: 100%;
   height: 1px;
   display: inline-block;
   cursor: pointer;
+  margin-bottom: 5%;
+}
+
+.projectImg {
+  width: 30vw;
+  height: 30vh;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 5%;
+}
+
+.projectsContent {
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projectsContent a {
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projectsContent a i,
+.projectsContent a span {
+  padding: 0;
+  margin: 0;
+}
+
+.project {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  text-align: left;
+  margin: 0 auto;
+}
+.project h4 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  text-align: left;
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 0 5%;
+  position: relative;
+  z-index: 1;
+}
+.project h4::before {
+  content: " ";
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  display: inline-block;
+  background: linear-gradient(135deg, #00ad4249, rgba(0, 0, 0, 0));
+  position: absolute;
+  top: -0.25rem;
+  left: -0.75rem;
+  z-index: -1;
+}
+.project p {
+  margin: 0 5%;
+}
+.project .links {
+  margin: 0 auto 5% auto;
+}
+.project .links span {
+  text-transform: none;
+}
+.project .links a:hover i, .project .links a:hover span {
+  color: #00ad42;
 }

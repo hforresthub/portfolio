@@ -18,7 +18,18 @@ a i {
 	text-transform: uppercase;
 	cursor: pointer;
 }
+.navButton i,
+a i {
+	padding: 1rem 0.25rem 0 0.25rem;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+a i {
+	padding: 0rem 0.25rem 1rem 0.25rem;
+}
 nav ul li a::before,
+.project h4::before,
 nav ul li .navButton::before {
 	content: "";
 	background: radial-gradient(ellipse at top, $septenaryColor 0%, $quaternaryColor 80%);
