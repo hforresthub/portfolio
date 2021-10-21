@@ -247,6 +247,14 @@ body {
   background: linear-gradient(-45deg, #22272f 0%, #1b1f25 100%);
   background-size: 100% 200%;
   z-index: -2;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container,
@@ -298,7 +306,7 @@ a,
 }
 
 .container {
-  margin: 5vh;
+  margin: 5vh 5vh 0 5vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -373,9 +381,9 @@ nav ul {
           justify-content: space-between;
 }
 
-main .wrapper {
-  height: 80vh;
-  width: 47.5vw;
+main .wrapper, main {
+  height: 78vh;
+  width: 45vw;
 }
 
 a,
@@ -395,10 +403,6 @@ li:hover > a,
   color: #00ad42;
 }
 
-main .wrapper.outOfSight {
-  display: none;
-}
-
 img {
   width: 100%;
   max-width: 100%;
@@ -406,6 +410,18 @@ img {
   max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+main .imgContainer {
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+footer {
+  text-align: center;
+  margin-top: 1%;
 }
 
 p {
@@ -598,6 +614,66 @@ p {
     bottom: 120vh;
   }
 }
+main {
+  z-index: 0;
+  border-radius: 0 6px 6px 0;
+}
+
+main .wrapper.intoSight {
+  position: relative;
+  opacity: 1;
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
+  overflow-x: hidden;
+  border-radius: 6px;
+}
+
+main .wrapper.outOfSight {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  -webkit-animation: fadeOut 3s;
+          animation: fadeOut 3s;
+  overflow: hidden;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
 li {
   width: 90%;
 }
@@ -634,7 +710,6 @@ a i {
   padding: 0rem 0.25rem 1rem 0.25rem;
 }
 
-nav ul li a::before,
 .project h4::before,
 nav ul li .navButton::before {
   content: "";
@@ -834,4 +909,96 @@ h3::after, .project::before {
 }
 .project .links a:hover i, .project .links a:hover span {
   color: #00ad42;
+}
+
+@media (min-width: 1440px) {
+  body {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  main {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+@media (max-width: 1000px) {
+  body {
+    overflow: scroll;
+    padding-bottom: 5%;
+  }
+
+  .container,
+header > .wrapper,
+header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .headerCard {
+    width: 80%;
+    height: 80%;
+  }
+
+  main {
+    width: 70%;
+    border-radius: 0 0 6px 6px;
+  }
+
+  main .wrapper {
+    width: 100%;
+    height: 97.5%;
+  }
+
+  .navBar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: fixed;
+  }
+
+  nav ul {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  nav ul li::before {
+    content: "";
+    background: radial-gradient(ellipse at top, #444a5e 0%, #30323b 80%);
+    height: 100px;
+    width: 1px;
+    display: inline-block;
+  }
+}
+@media (max-width: 500px) {
+  .skillsContent li {
+    width: 40%;
+  }
+  .skillsContent li span,
+.skillsContent li i {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .skillsContent li {
+    width: 90%;
+  }
+  .skillsContent li span,
+.skillsContent li i {
+    font-size: 1rem;
+  }
 }
