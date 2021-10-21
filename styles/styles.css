@@ -261,10 +261,7 @@ body {
 .container,
 body {
   color: #e2e5f3;
-}
-
-.container {
-  padding-top: 2%;
+  background: rgba(0, 0, 0, 0);
 }
 
 div,
@@ -294,7 +291,6 @@ a,
 }
 
 .container {
-  margin: 5vh 5vh 0 5vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -724,6 +720,7 @@ header .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 2%;
 }
 
 .headerCard {
@@ -1055,5 +1052,9 @@ header {
   .skillsContent li span,
 .skillsContent li i {
     font-size: 1rem;
+  }
+
+  a, p {
+    font-size: 0.8rem;
   }
 }
