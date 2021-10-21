@@ -29,6 +29,13 @@
 		width: 80%;
 		height: 80%;
 	}
+	.profileImg {
+		width: calc(10vw + 10vh);
+		margin-top: -15%;
+		img {
+			box-shadow: -7.5px 7.5px 0 $accentColor;
+		}
+	}
 	main {
 		width: 70%;
 		border-radius: 0 0 6px 6px;
@@ -45,6 +52,7 @@
 		height: 100px;
 		width: 100%;
 		position: fixed;
+		z-index: 3;
 		top: 0;
 		left: 0;
 	}
@@ -66,6 +74,9 @@
 	}
 }
 @media (max-width: 400px) {
+	h3, .project h4 {
+		font-size: 1rem;
+	}
 	.skillsContent li {
 		width: 90%;
 		span,

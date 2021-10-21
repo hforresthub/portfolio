@@ -277,23 +277,6 @@ a,
           align-items: center;
 }
 
-.skillsContent li {
-  width: 30%;
-  text-align: center;
-  padding: 1rem;
-}
-.skillsContent li:hover {
-  color: #c3dfcd;
-}
-.skillsContent li i {
-  font-size: 2rem;
-}
-
-.skillsContent ul {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 nav ul,
 .headerCard,
 main .wrapper,
@@ -310,16 +293,6 @@ a,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-header .wrapper {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header nav {
-  margin: 0.75rem;
 }
 
 ul {
@@ -363,24 +336,6 @@ main .wrapper::-webkit-scrollbar-thumb:hover {
   border-radius: 20px;
 }
 
-nav ul {
-  height: 500px;
-  width: 100px;
-  position: relative;
-  z-index: 1;
-}
-
-.headerCard {
-  background-color: #33353f;
-  -webkit-box-shadow: -1rem -1rem 0 #24272e83;
-          box-shadow: -1rem -1rem 0 #24272e83;
-  height: 90vh;
-  width: 40vw;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 main .wrapper, main {
   height: 78vh;
   width: 45vw;
@@ -417,6 +372,36 @@ main .imgContainer {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+h3 {
+  width: 100%;
+  position: relative;
+  padding: 2rem;
+  z-index: 1;
+  font-size: 2rem;
+}
+h3::before {
+  content: " ";
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: inline-block;
+  background: linear-gradient(135deg, #00ad4249, rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  z-index: -1;
+}
+
+h3::after, .project::before {
+  content: "";
+  background: radial-gradient(ellipse at top, #444a5e 0%, #30323b 80%);
+  width: 100%;
+  height: 1px;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 5%;
 }
 
 footer {
@@ -674,8 +659,19 @@ main .wrapper.outOfSight {
     height: 0;
   }
 }
+header nav {
+  margin: 0.75rem;
+}
+
 li {
   width: 90%;
+}
+
+nav ul {
+  height: 500px;
+  width: 100px;
+  position: relative;
+  z-index: 1;
 }
 
 a,
@@ -717,6 +713,23 @@ nav ul li .navButton::before {
   width: 100%;
   height: 1px;
   display: inline-block;
+}
+
+header .wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerCard {
+  background-color: #33353f;
+  -webkit-box-shadow: -1rem -1rem 0 #24272e83;
+          box-shadow: -1rem -1rem 0 #24272e83;
+  height: 90vh;
+  width: 40vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 h2 {
@@ -786,34 +799,21 @@ h2::after {
           transform: rotate(-15deg);
 }
 
-h3 {
-  width: 100%;
-  position: relative;
-  padding: 2rem;
-  z-index: 1;
+.skillsContent li {
+  width: 30%;
+  text-align: center;
+  padding: 1rem;
+}
+.skillsContent li:hover {
+  color: #c3dfcd;
+}
+.skillsContent li i {
   font-size: 2rem;
 }
-h3::before {
-  content: " ";
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  display: inline-block;
-  background: linear-gradient(135deg, #00ad4249, rgba(0, 0, 0, 0));
-  position: absolute;
-  top: 1.5rem;
-  left: 1rem;
-  z-index: -1;
-}
 
-h3::after, .project::before {
-  content: "";
-  background: radial-gradient(ellipse at top, #444a5e 0%, #30323b 80%);
-  width: 100%;
-  height: 1px;
-  display: inline-block;
-  cursor: pointer;
-  margin-bottom: 5%;
+.skillsContent ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .projectImg {
@@ -950,6 +950,15 @@ header {
     height: 80%;
   }
 
+  .profileImg {
+    width: calc(10vw + 10vh);
+    margin-top: -15%;
+  }
+  .profileImg img {
+    -webkit-box-shadow: -7.5px 7.5px 0 #00ad4249;
+            box-shadow: -7.5px 7.5px 0 #00ad4249;
+  }
+
   main {
     width: 70%;
     border-radius: 0 0 6px 6px;
@@ -972,6 +981,7 @@ header {
     height: 100px;
     width: 100%;
     position: fixed;
+    z-index: 3;
     top: 0;
     left: 0;
   }
@@ -994,6 +1004,10 @@ header {
   }
 }
 @media (max-width: 400px) {
+  h3, .project h4 {
+    font-size: 1rem;
+  }
+
   .skillsContent li {
     width: 90%;
   }

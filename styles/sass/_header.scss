@@ -1,3 +1,14 @@
+header .wrapper {
+	align-items: center;
+}
+.headerCard {
+	background-color: $quinaryColor;
+	box-shadow: -1rem -1rem 0 $tertiaryColorTransparent;
+	height: 90vh;
+	width: 40vw;
+	justify-content: space-between;
+}
+
 h2 {
 	width: 100%;
 	text-align: center;

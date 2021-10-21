@@ -27,20 +27,6 @@ a,
 	justify-content: space-around;
 	align-items: center;
 }
-.skillsContent li {
-	width: 30%;
-	text-align: center;
-	padding: 1rem;
-	&:hover {
-		color: $fontSecondaryColor;
-	}
-	i {
-		font-size: 2rem;
-	}
-}
-.skillsContent ul {
-	flex-wrap: wrap;
-}
 nav ul,
 .headerCard,
 main .wrapper,
@@ -51,12 +37,6 @@ a,
 .container {
 	margin: 5vh 5vh 0 5vh;
 	justify-content: center;
-}
-header .wrapper {
-	align-items: center;
-}
-header nav {
-	margin: 0.75rem;
 }
 ul {
 	list-style: none;
@@ -93,19 +73,6 @@ main .wrapper {
 		border-radius: 20px;
 	}
 }
-nav ul {
-	height: 500px;
-	width: 100px;
-	position: relative;
-	z-index: 1;
-}
-.headerCard {
-	background-color: $quinaryColor;
-	box-shadow: -1rem -1rem 0 $tertiaryColorTransparent;
-	height: 90vh;
-	width: 40vw;
-	justify-content: space-between;
-}
 main .wrapper, main {
 	height: 78vh;
 	width: 45vw;
@@ -135,6 +102,34 @@ img {
 main .imgContainer {
 	width: 90%;
 	height: fit-content;
+}
+h3 {
+	width: 100%;
+	position: relative;
+	padding: 2rem;
+	z-index: 1;
+	font-size: 2rem;
+	&::before {
+		content: ' ';
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		display: inline-block;
+		background: linear-gradient(135deg, $accentColor, rgba(0, 0, 0, 0));
+		position: absolute;
+		top: 1.5rem;
+		left: 1rem;
+		z-index: -1;
+	}
+}
+h3::after, .project::before {
+	content: "";
+	background: radial-gradient(ellipse at top, $septenaryColor 0%, $quaternaryColor 80%);
+	width: 100%;
+	height: 1px;
+	display: inline-block;
+	cursor: pointer;
+	margin-bottom: 5%;
 }
 footer {
 	text-align: center;

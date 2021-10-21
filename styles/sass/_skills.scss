@@ -1,0 +1,14 @@
+.skillsContent li {
+	width: 30%;
+	text-align: center;
+	padding: 1rem;
+	&:hover {
+		color: $fontSecondaryColor;
+	}
+	i {
+		font-size: 2rem;
+	}
+}
+.skillsContent ul {
+	flex-wrap: wrap;
+}
