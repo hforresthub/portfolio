@@ -256,12 +256,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: rgba(0, 0, 0, 0);
 }
 
 .container,
 body {
   color: #e2e5f3;
-  background: rgba(0, 0, 0, 0);
 }
 
 div,
