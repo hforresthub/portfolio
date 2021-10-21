@@ -262,6 +262,10 @@ body {
   color: #e2e5f3;
 }
 
+.container {
+  padding-top: 2%;
+}
+
 div,
 ul,
 li,
