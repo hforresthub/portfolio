@@ -995,6 +995,10 @@ header {
     width: 1px;
     display: inline-block;
   }
+
+  main, main .wrapper {
+    height: 100%;
+  }
 }
 @media (max-width: 500px) {
   .skillsContent li {
