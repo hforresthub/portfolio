@@ -27,20 +27,20 @@ h2::after {
 	width: calc(10vw + 10vh);
 	margin-top: -10rem;
 	z-index: 1;
-	img {
+	img, video {
 		border: 4px solid $quaternaryColor;
-		box-shadow: -15px 15px 0 $accentColor;
 		border-radius: 50%;
-		width: 100%;
-		max-width: 100%;
-		height: 100%;
-		max-height: 100%;
+		box-shadow: -15px 15px 0 $accentColor;
+		width: 300px;
+		// max-width: 100%;
+		height: 300px;
+		// max-height: 100%;
 		display: block;
 		object-fit: cover;
 	}
 }
 .backImgContainer {
-	background-image: url('https://placekitten.com/500/500');
+	background-image: url('../images/codeback.JPG');
 	background-size: cover;
 	width: 100%;
 	height: 40vh;

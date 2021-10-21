@@ -21,6 +21,7 @@ app.navigateTo = (event, goTo) => {
 		{
 			element.classList.remove('aria-hidden', 'outOfSight')
 			element.classList.add('intoSight')
+			element.scrollIntoView({behavior: 'smooth'});
 		} else {
 			if (!element.classList.contains('outOfSight'))
 			{
