@@ -5,6 +5,7 @@
 }
 html {
 	font-size: 125%;
+	background: $secondaryColor;
 }
 body {
 	background: linear-gradient(-45deg, $tertiaryColor 0%, $secondaryColor 100%);

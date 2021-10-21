@@ -241,6 +241,7 @@ COLORS
 
 html {
   font-size: 125%;
+  background: #1b1f25;
 }
 
 body {
@@ -801,6 +802,10 @@ h2::after {
           transform: rotate(-15deg);
 }
 
+.contactContent a {
+  margin-bottom: 10%;
+}
+
 .skillsContent li {
   width: 30%;
   text-align: center;
@@ -928,11 +933,33 @@ h2::after {
     width: 100%;
     overflow: hidden;
   }
+
+  main .wrapper {
+    width: 100%;
+    overflow: scroll;
+  }
 }
 @media (max-width: 1000px) {
   body {
-    overflow: scroll;
+    overflow-x: hidden;
     padding-bottom: 5%;
+  }
+
+  html {
+    overflow-y: scroll;
+    scrollbar-color: #00ad42 #30323b;
+    scrollbar-width: thin;
+  }
+  html::-webkit-scrollbar {
+    width: 5px;
+  }
+  html::-webkit-scrollbar-thumb {
+    background-color: #c3dfcd;
+    border-radius: 20px;
+  }
+  html::-webkit-scrollbar-thumb:hover {
+    background-color: #00ad42;
+    border-radius: 20px;
   }
 
   .container,
@@ -1007,6 +1034,14 @@ header {
   .skillsContent li span,
 .skillsContent li i {
     font-size: 1rem;
+  }
+
+  .profileImg {
+    margin-top: -5rem;
+  }
+  .profileImg video {
+    height: 200px;
+    width: 200px;
   }
 }
 @media (max-width: 400px) {
