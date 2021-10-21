@@ -9,11 +9,6 @@ app.contactEl = document.querySelector('.contactButton')
 app.mainContentEls = document.querySelectorAll('main .wrapper')
 
 // namespace functions
-app.navigateToAbout = (event) => {
-	console.log(event);
-	// hide current meta page, and display the page that was navigated to, by toggling aria-hidden and custom outOfSight classes
-
-}
 app.navigateTo = (event, goTo) => {
 	// hide current meta page, and display the page that was navigated to, by toggling aria-hidden and custom outOfSight classes
 	app.mainContentEls.forEach((element) => {
@@ -41,6 +36,7 @@ app.navigateTo = (event, goTo) => {
 
 // app initialization
 app.init = function() {
+	// listeners for li buttons to navigate around the page
 	app.aboutEl.classList.add('currentButton')
 	app.aboutEl.addEventListener('click', (event) => {
 		app.navigateTo(event, 'aboutContent')
@@ -69,6 +65,21 @@ app.init = function() {
 		app.skillsEl.classList.remove('currentButton')
 		app.projectsEl.classList.remove('currentButton')
 		app.aboutEl.classList.remove('currentButton')
+	})
+	// listen for keypresses with respect to focus, so links work with tabbing
+	document.addEventListener('keypress', (event) => {
+		const curButton = document.activeElement.className
+		if (curButton === "about" || curButton === "skills" || curButton === "projects" || curButton === "contact")
+		{
+			app.navigateTo(event, curButton + 'Content')
+			app.aboutEl.classList.remove('currentButton')
+			app.skillsEl.classList.remove('currentButton')
+			app.projectsEl.classList.remove('currentButton')
+			app.contactEl.classList.remove('currentButton')
+			document.querySelector('.' + curButton + 'Button').classList.add('currentButton')
+		} else if (document.activeElement.firstChild) {
+			window.location.assign(document.activeElement.firstChild.href)
+		}
 	})
 }
 

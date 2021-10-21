@@ -11,7 +11,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./styles/styles.css">
 	</link>
-	<title>Hal's Portfolio WIP</title>
+	<link rel="icon" type="image/png" href="./images/halforrest.png">
+	<title>Hal's Portfolio</title>
 </head>
 
 <body>
@@ -25,24 +26,25 @@
 				<li class="boxAnimation5"></li>
 				<li class="boxAnimation6"></li>
 			</ul>
-		</div>
+		</div> <!-- end of .boxAnimations -->
+
 		<header>
 			<div class="wrapper">
 				<nav>
 					<ul class="navBar">
-						<li role="button" tabindex=0>
+						<li role="button" tabindex=0 class="about">
 							<div class="navButton aboutButton"><i class="fas fa-address-card"
 									aria-hidden="true"></i><span>About</span></div>
 						</li>
-						<li role="button" tabindex=0>
+						<li role="button" tabindex=0 class="skills">
 							<div class="navButton skillsButton"><i class="fas fa-toolbox"
 									aria-hidden="true"></i><span>Skills</span></div>
 						</li>
-						<li role="button" tabindex=0>
+						<li role="button" tabindex=0 class="projects">
 							<div class="navButton projectsButton"><i class="fas fa-project-diagram"
 									aria-hidden="true"></i><span>Projects</span></div>
 						</li>
-						<li role="button" tabindex=0>
+						<li role="button" tabindex=0 class="contact">
 							<div class="navButton contactButton"><i class="fas fa-at"
 									aria-hidden="true"></i><span>Contact</span></div>
 						</li>
@@ -53,11 +55,11 @@
 					</div>
 					<div class="profileImg imgContainer">
 						<video src="./images/profileVideo.mp4" poster="../images/profilePic.jpg" muted autoplay loop>
-							Your browser does not support this video.
+							Your browser does not support this video.  It should have shown a pixelated video or image of me coding.
 						</video>
 					</div>
 					<h1>Hal Forrest</h1>
-					<h2>Web Developer</h2>
+					<h2>Front-End Developer</h2>
 					<ul>
 						<li role="button" tabindex=0><a href="https://www.linkedin.com/in/halcodes/" target="_blank"
 								rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
@@ -69,17 +71,20 @@
 								rel="noopener noreferrer"><i class="fab fa-twitter-square" aria-hidden="true"></i></a>
 						</li>
 					</ul>
-				</div>
-			</div>
+				</div> <!-- end of .headerCard .wrapper -->
+			</div> <!-- end of .wrapper -->
 		</header>
 
 		<main>
 			<div class="wrapper aboutContent intoSight">
 				<h3>About Me</h3>
-				<p>I'm a front end developer with experience building applications and I have a passion for continuously learning, and writing responsive code that is accessible to all.</p>
-				<p>I have a background in IT services and device support in which I communicated with clients and coworkers to solve complex problems and implement positive solutions.</p>
-				<p>Additionally, I provide exceptional problem solving skills and technical knowledge that makes a great contribution to any team.</p>
-			</div>
+				<p>I'm a front end developer with experience building applications and I have a passion for continuously
+					learning, and writing responsive code that is accessible to all.</p>
+				<p>I have a background in IT services and device support in which I communicated with clients and
+					coworkers to solve complex problems and implement positive solutions.</p>
+				<p>Additionally, I provide exceptional problem solving skills and technical knowledge that makes a great
+					contribution to any team.</p>
+			</div> <!-- end of .wrapper .aboutContent -->
 			<div class="wrapper skillsContent aria-hidden outOfSight">
 				<h3>My Skills</h3>
 				<ul>
@@ -96,7 +101,7 @@
 					<li><i class="fab fa-figma" aria-hidden="true"></i><span>Figma</span></li>
 					<li><i class="fas fa-user-friends" aria-hidden="true"></i><span>Team/Paired Programming</span></li>
 				</ul>
-			</div>
+			</div> <!-- end of .wrapper .skillsContent -->
 			<div class="wrapper projectsContent aria-hidden outOfSight">
 				<h3>My Projects</h3>
 				<p class="contentDescription">Here are some of the more recent projects I've worked on:</p>
@@ -104,72 +109,111 @@
 					<h4>Nygma Machine</h4>
 					<a href="https://nygma-maze.netlify.app/" target="_blank" rel="noopener noreferrer">
 						<div class="imgContainer projectImg">
-							<img src="./images/nygma.JPG" alt="Preview of the Nygma Machine website, featuring a title and question mark">
+							<img src="./images/nygma.JPG"
+								alt="Preview of the Nygma Machine website, featuring a title and question mark">
 						</div>
 					</a>
 					<p>Used <em>HTML, SCSS, JS, React, GitHub, Teamwork, API Integration, Firebase</em></p>
-					<p>An app that takes a question, and gives advice if you can complete a maze.  Acquires answers from the Advice Slip API and stores user data on firebase.</p>
+					<p>An app that takes a question, and gives advice if you can complete a maze. Acquires answers from
+						the Advice Slip API and stores user data on firebase.</p>
 					<div class="links">
-						<a href="https://nygma-maze.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i><span>Live</span></a>
-						<a href="https://github.com/hforresthub/nygma-machine" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square" aria-hidden="true"></i><span>GitHub</span></a>
+						<a href="https://nygma-maze.netlify.app/" target="_blank" rel="noopener noreferrer"><i
+								class="fas fa-external-link-alt"></i><span>Live</span></a>
+						<a href="https://github.com/hforresthub/nygma-machine" target="_blank"
+							rel="noopener noreferrer"><i class="fab fa-github-square"
+								aria-hidden="true"></i><span>GitHub</span></a>
 					</div>
 				</div>
 				<div class="project">
 					<h4>Foundit</h4>
 					<a href="https://foundit.netlify.app/" target="_blank" rel="noopener noreferrer">
 						<div class="imgContainer projectImg">
-							<img src="./images/foundit.JPG" alt="Preview of the Foundit website, featuring a title and some instructions, a login, highscores, and some rooms">
+							<img src="./images/foundit.JPG"
+								alt="Preview of the Foundit website, featuring a title and some instructions, a login, highscores, and some rooms">
 						</div>
 					</a>
 					<p>Used <em>HTML, JS, React, GitHub, Firebase</em></p>
-					<p>An app for hiding and finding comments in rooms.  It uses React to efficiently render the page as users add comments and rooms to the page.  It uses Firebase to store user data and comments/rooms in a database that is watched for changes, so that other users can see changes in realtime.</p>
+					<p>An app for hiding and finding comments in rooms. It uses React to efficiently render the page as
+						users add comments and rooms to the page. It uses Firebase to store user data and comments/rooms
+						in a database that is watched for changes, so that other users can see changes in realtime.</p>
 					<div class="links">
-						<a href="https://foundit.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i><span>Live</span></a>
-						<a href="https://github.com/hforresthub/halForrestProjectThree" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square" aria-hidden="true"></i><span>GitHub</span></a>
+						<a href="https://foundit.netlify.app/" target="_blank" rel="noopener noreferrer"><i
+								class="fas fa-external-link-alt"></i><span>Live</span></a>
+						<a href="https://github.com/hforresthub/halForrestProjectThree" target="_blank"
+							rel="noopener noreferrer"><i class="fab fa-github-square"
+								aria-hidden="true"></i><span>GitHub</span></a>
 					</div>
-				</div>
+				</div> <!-- end of .project -->
 				<div class="project">
 					<h4>Meal Masterchef</h4>
 					<a href="https://meal-masterchef.netlify.app/" target="_blank" rel="noopener noreferrer">
 						<div class="imgContainer projectImg">
-							<img src="./images/mealMasterchef.JPG" alt="Preview of the Meal Masterchef website, featuring a title and food categories">
+							<img src="./images/mealMasterchef.JPG"
+								alt="Preview of the Meal Masterchef website, featuring a title and food categories">
 						</div>
 					</a>
 					<p>Used <em>HTML, SCSS, JS, GitHub, Pair Programming, API Integration</em></p>
-					<p>An app that presents multiple ingredient options, and user can choose one and get 3 random meals made from that ingredient.  All the information is retrieved from The Meal Database API.  Then the user can ask for 3 new random meals, or choose one and they will be provided information on how to make it, what ingredients they'll need, and when possible, a video on how to make it.</p>
+					<p>An app that presents multiple ingredient options, and user can choose one and get 3 random meals
+						made from that ingredient. All the information is retrieved from The Meal Database API. Then the
+						user can ask for 3 new random meals, or choose one and they will be provided information on how
+						to make it, what ingredients they'll need, and when possible, a video on how to make it.</p>
 					<div class="links">
-						<a href="https://meal-masterchef.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i><span>Live</span></a>
-						<a href="https://github.com/hforresthub/mealMasterchefApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square" aria-hidden="true"></i><span>GitHub</span></a>
+						<a href="https://meal-masterchef.netlify.app/" target="_blank" rel="noopener noreferrer"><i
+								class="fas fa-external-link-alt"></i><span>Live</span></a>
+						<a href="https://github.com/hforresthub/mealMasterchefApp" target="_blank"
+							rel="noopener noreferrer"><i class="fab fa-github-square"
+								aria-hidden="true"></i><span>GitHub</span></a>
 					</div>
-				</div>
+				</div> <!-- end of .project -->
 				<div class="project">
 					<h4>PSD Conversion</h4>
 					<a href="https://psd-conversion.netlify.app/" target="_blank" rel="noopener noreferrer">
 						<div class="imgContainer projectImg">
-							<img src="./images/psdConversion.JPG" alt="Preview of the psd-conversion website, featuring the title welcome to Beachstays and a nav">
+							<img src="./images/psdConversion.JPG"
+								alt="Preview of the psd-conversion website, featuring the title welcome to Beachstays and a nav">
 						</div>
 					</a>
 					<p>Used <em>HTML, SCSS, JS, GitHub</em></p>
-					<p>Took a PSD design with additional font/color specifications and converted it into this website.</p>
+					<p>Took a PSD design with additional font/color specifications and converted it into this website.
+					</p>
 					<div class="links">
-						<a href="https://psd-conversion.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i><span>Live</span></a>
-						<a href="https://github.com/hforresthub/halForrestProjectOne" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square" aria-hidden="true"></i><span>GitHub</span></a>
+						<a href="https://psd-conversion.netlify.app/" target="_blank" rel="noopener noreferrer"><i
+								class="fas fa-external-link-alt"></i><span>Live</span></a>
+						<a href="https://github.com/hforresthub/halForrestProjectOne" target="_blank"
+							rel="noopener noreferrer"><i class="fab fa-github-square"
+								aria-hidden="true"></i><span>GitHub</span></a>
 					</div>
-				</div>
+				</div> <!-- end of .project -->
 			</div>
 			<div class="wrapper contactContent aria-hidden outOfSight">
 				<h3>Contact information</h3>
 				<h4>My email:</h4>
 				<a href="mailto:hgrforrest@gmail.com">hgrforrest@gmail.com</a>
+				<form action="https://formspree.io/f/mjvjdeyr" method="POST">
+					<label>
+						Your name:
+						<input type="text" name="name"></input>
+					</label>
+					<label>
+						Your email:
+						<input type="email" name="_replyto">
+					</label>
+					<label>
+						Your message:
+						<textarea name="message"></textarea>
+					</label>
+					<!-- your other form fields go here -->
+					<button type="submit">Send</button>
+				</form>
 			</div>
 		</main>
+	</div> <!-- end of .container .wrapper -->
 
-		
-	</div>
 	<footer>
-		<p>Created by Hal Forrest</p>
+		<p>Created by Hal Forrest at Juno College 2021</p>
 	</footer>
-	<script src="./js/script.js"></script>
+
+	<script src=" ./js/script.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,6 @@
+/* =================================================
+SETUP
+================================================= */
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -233,6 +236,9 @@ template {
 /* =================================================
 COLORS
 ================================================= */
+/* =================================================
+GENERAL
+================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -256,7 +262,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: rgba(0, 0, 0, 0);
+  background: none;
 }
 
 .container,
@@ -307,58 +313,6 @@ main .wrapper {
   background-color: #30323b;
 }
 
-main {
-  border-radius: 0 6px 6px 0;
-  background-color: #30323b;
-}
-
-main .wrapper {
-  border-radius: 0 6px 6px 0;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  overflow-y: scroll;
-  scrollbar-color: #00ad42 #30323b;
-  scrollbar-width: thin;
-  margin: 5px 0;
-}
-main .wrapper p {
-  padding: 1rem;
-}
-main .wrapper::-webkit-scrollbar {
-  width: 5px;
-}
-main .wrapper::-webkit-scrollbar-thumb {
-  background-color: #c3dfcd;
-  border-radius: 20px;
-}
-main .wrapper::-webkit-scrollbar-thumb:hover {
-  background-color: #00ad42;
-  border-radius: 20px;
-}
-
-main .wrapper, main {
-  height: 78vh;
-  width: 45vw;
-}
-
-a,
-.navButton,
-.navButton i,
-a i {
-  color: #c3dfcd;
-  text-decoration: none;
-}
-
-li:hover > .navButton > i,
-li:hover > .navButton,
-li:hover > a > i,
-li:hover > a,
-.currentButton,
-.currentButton i {
-  color: #00ad42;
-}
-
 img {
   width: 100%;
   max-width: 100%;
@@ -366,13 +320,6 @@ img {
   max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-main .imgContainer {
-  width: 90%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 h3 {
@@ -405,15 +352,23 @@ h3::after, .project::before {
   margin-bottom: 5%;
 }
 
-footer {
-  text-align: center;
-  margin-top: 1%;
-}
-
 p {
   font-weight: 200;
 }
 
+input, textarea {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  margin-top: 1%;
+  text-shadow: 2px 2px 4px #00ad42, -2px 2px 4px #00ad42, 2px -2px 4px #00ad42, -2px -2px 4px #00ad42;
+}
+
+/* =================================================
+ANIMATIONS
+================================================= */
 .boxAnimation1,
 .boxAnimation2,
 .boxAnimation3,
@@ -660,6 +615,26 @@ main .wrapper.outOfSight {
     height: 0;
   }
 }
+/* =================================================
+NAV
+================================================= */
+a,
+.navButton,
+.navButton i,
+a i {
+  color: #c3dfcd;
+  text-decoration: none;
+}
+
+li:hover > .navButton > i,
+li:hover > .navButton,
+li:hover > a > i,
+li:hover > a,
+.currentButton,
+.currentButton i {
+  color: #00ad42;
+}
+
 header nav {
   margin: 0.75rem;
 }
@@ -716,6 +691,9 @@ nav ul li .navButton::before {
   display: inline-block;
 }
 
+/* =================================================
+HEADER
+================================================= */
 header .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -803,6 +781,54 @@ h2::after {
   margin-bottom: 10%;
 }
 
+/* =================================================
+MAIN
+================================================= */
+main {
+  border-radius: 0 6px 6px 0;
+  background-color: #30323b;
+}
+
+main .wrapper {
+  border-radius: 0 6px 6px 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow-y: scroll;
+  scrollbar-color: #00ad42 #30323b;
+  scrollbar-width: thin;
+  margin: 5px 0;
+}
+main .wrapper p {
+  padding: 1rem;
+}
+main .wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+main .wrapper::-webkit-scrollbar-thumb {
+  background-color: #c3dfcd;
+  border-radius: 20px;
+}
+main .wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #00ad42;
+  border-radius: 20px;
+}
+
+main .wrapper, main {
+  height: 78vh;
+  width: 45vw;
+}
+
+main .imgContainer {
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+/* =================================================
+SKILLS
+================================================= */
 .skillsContent li {
   width: 30%;
   text-align: center;
@@ -820,6 +846,9 @@ h2::after {
       flex-wrap: wrap;
 }
 
+/* =================================================
+PROJECTS
+================================================= */
 .projectImg {
   width: 30vw;
   height: 30vh;
@@ -915,6 +944,9 @@ h2::after {
   color: #00ad42;
 }
 
+/* =================================================
+MEDIA QUERIES
+================================================= */
 @media (min-width: 1440px) {
   body {
     width: 1440px;

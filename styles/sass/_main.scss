@@ -1,0 +1,37 @@
+/* =================================================
+MAIN
+================================================= */
+main {
+	border-radius: 0 6px 6px 0;
+	background-color: $quaternaryColor;
+}
+main .wrapper {
+	border-radius: 0 6px 6px 0;
+	justify-content: flex-start;
+	overflow-y: scroll;
+	scrollbar-color: $primaryColor $quaternaryColor;
+	scrollbar-width: thin;
+	margin: 5px 0;
+	p {
+		padding: 1rem;
+	}
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $fontSecondaryColor;
+		border-radius: 20px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: $primaryColor;
+		border-radius: 20px;
+	}
+}
+main .wrapper, main {
+	height: 78vh;
+	width: 45vw;
+}
+main .imgContainer {
+	width: 90%;
+	height: fit-content;
+}
