@@ -89,12 +89,12 @@ h3::after, .project::before {
 p {
 	font-weight: 200;
 }
-input, textarea {
-	display: block;
+a:hover {
+	color: $primaryColor;
 }
 footer {
 	text-align: center;
 	margin-top: 1%;
-	text-shadow: 2px 2px 4px $primaryColor, -2px 2px 4px $primaryColor,
-	2px -2px 4px $primaryColor, -2px -2px 4px $primaryColor, ;
+	text-shadow: 2px 2px 2px $primaryColor, -2px 2px 14px $primaryColor,
+	2px -2px 14px $primaryColor, -2px -2px 14px $primaryColor, ;
 }

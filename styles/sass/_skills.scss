@@ -3,13 +3,26 @@ SKILLS
 ================================================= */
 .skillsContent li {
 	width: 30%;
+	// height: 30%;
+	// width: 3rem;
+	height: 3rem;
 	text-align: center;
 	padding: 1rem;
+	margin-top: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	&:hover {
 		color: $fontSecondaryColor;
 	}
 	i {
 		font-size: 2rem;
+	}
+	&:hover i {
+		font-size: 2.4rem;
+	}
+	&:hover span {
+		font-size: 1.2rem;
 	}
 }
 .skillsContent ul {

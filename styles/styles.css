@@ -356,14 +356,14 @@ p {
   font-weight: 200;
 }
 
-input, textarea {
-  display: block;
+a:hover {
+  color: #00ad42;
 }
 
 footer {
   text-align: center;
   margin-top: 1%;
-  text-shadow: 2px 2px 4px #00ad42, -2px 2px 4px #00ad42, 2px -2px 4px #00ad42, -2px -2px 4px #00ad42;
+  text-shadow: 2px 2px 2px #00ad42, -2px 2px 14px #00ad42, 2px -2px 14px #00ad42, -2px -2px 14px #00ad42;
 }
 
 /* =================================================
@@ -635,6 +635,11 @@ li:hover > a,
   color: #00ad42;
 }
 
+.currentButton,
+.currentButton i {
+  text-shadow: 1px 1px 4px #1b1f25, -1px 1px 4px #1b1f25, 1px -1px 4px #1b1f25, -1px -1px 4px #1b1f25;
+}
+
 header nav {
   margin: 0.75rem;
 }
@@ -777,10 +782,6 @@ h2::after {
           transform: rotate(-15deg);
 }
 
-.contactContent a {
-  margin-bottom: 10%;
-}
-
 /* =================================================
 MAIN
 ================================================= */
@@ -831,14 +832,31 @@ SKILLS
 ================================================= */
 .skillsContent li {
   width: 30%;
+  height: 3rem;
   text-align: center;
   padding: 1rem;
+  margin-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .skillsContent li:hover {
   color: #c3dfcd;
 }
 .skillsContent li i {
   font-size: 2rem;
+}
+.skillsContent li:hover i {
+  font-size: 2.4rem;
+}
+.skillsContent li:hover span {
+  font-size: 1.2rem;
 }
 
 .skillsContent ul {
@@ -905,6 +923,13 @@ PROJECTS
   text-align: left;
   margin: 0 auto;
 }
+.project > a img {
+  border: 3px solid #c3dfcd;
+  border-radius: 6px;
+}
+.project > a img:hover {
+  border: 3px solid #00ad42;
+}
 .project h4 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -940,8 +965,58 @@ PROJECTS
 .project .links span {
   text-transform: none;
 }
-.project .links a:hover i, .project .links a:hover span {
+.project .links a:hover i,
+.project .links a:hover span {
   color: #00ad42;
+}
+
+/* =================================================
+CONTACT
+================================================= */
+.contactContent a {
+  margin-bottom: 5%;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+}
+
+label {
+  width: 90%;
+  color: #e2e5f3;
+  background-color: #30323b;
+  margin: 5%;
+}
+
+label, input, textarea {
+  display: block;
+  border-radius: 6px;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 5%;
+  color: #c3dfcd;
+  background-color: #1b1f25;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  margin: 5%;
+  width: 90%;
+  background: #c3dfcd;
+  color: #30323b;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: #00ad42;
+  border-color: #00ad42;
+  color: #c3dfcd;
 }
 
 /* =================================================

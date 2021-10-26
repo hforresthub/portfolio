@@ -16,6 +16,10 @@ li:hover > a,
 .currentButton i {
 	color: $primaryColor;
 }
+.currentButton,
+.currentButton i {
+	text-shadow: 1px 1px 4px $secondaryColor, -1px 1px 4px $secondaryColor, 1px -1px 4px $secondaryColor, -1px -1px 4px $secondaryColor;
+}
 header nav {
 	margin: 0.75rem;
 }

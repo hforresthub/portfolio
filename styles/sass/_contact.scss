@@ -1,0 +1,42 @@
+/* =================================================
+CONTACT
+================================================= */
+.contactContent a {
+	margin-bottom: 5%;
+}
+form {
+	width: 80%;
+	margin: auto;
+}
+label {
+	width: 90%;
+	color: $fontPrimaryColor;
+	background-color: $quaternaryColor;
+	margin: 5%;
+}
+label, input, textarea {
+	display: block;
+	border-radius: 6px;
+}
+input, textarea {
+	width: 100%;
+	margin-top: 5%;
+	color: $fontSecondaryColor;
+	background-color: $secondaryColor;
+}
+textarea {
+	resize: none;
+}
+button {
+	margin: 5%;
+	width: 90%;
+	background: $fontSecondaryColor;
+	color: $quaternaryColor;
+	border-radius: 6px;
+	cursor: pointer;
+	&:hover {
+		background: $primaryColor;
+		border-color: $primaryColor;
+		color: $fontSecondaryColor;
+	}
+}
