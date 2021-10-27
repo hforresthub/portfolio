@@ -7,8 +7,8 @@ SKILLS
 	// width: 3rem;
 	height: 3rem;
 	text-align: center;
-	padding: 1rem;
-	margin-top: 10%;
+	// padding: 1rem;
+	margin: 5% 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -27,4 +27,5 @@ SKILLS
 }
 .skillsContent ul {
 	flex-wrap: wrap;
+	padding-bottom: 5%;
 }

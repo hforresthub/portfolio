@@ -12,11 +12,11 @@ PROJECTS
 	overflow-y: scroll;
 	display: flex;
 	flex-direction: column;
-}
-.projectsContent a {
-	padding: 5%;
-	display: flex;
-	flex-direction: row;
+	a {
+		padding: 5%;
+		display: flex;
+		flex-direction: row;
+	}
 }
 .projectsContent a i,
 .projectsContent a span {

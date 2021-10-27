@@ -834,8 +834,7 @@ SKILLS
   width: 30%;
   height: 3rem;
   text-align: center;
-  padding: 1rem;
-  margin-top: 10%;
+  margin: 5% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -862,6 +861,7 @@ SKILLS
 .skillsContent ul {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 5%;
 }
 
 /* =================================================
@@ -885,7 +885,6 @@ PROJECTS
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 .projectsContent a {
   padding: 5%;
   display: -webkit-box;
