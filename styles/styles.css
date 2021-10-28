@@ -734,7 +734,8 @@ h2::after {
 }
 
 .profileImg {
-  width: calc(10vw + 10vh);
+  width: calc(15vw + 15vh);
+  height: calc(15vw + 15vh);
   margin-top: -10rem;
   z-index: 1;
 }
@@ -1083,7 +1084,6 @@ header {
   }
 
   .profileImg {
-    width: calc(10vw + 10vh);
     margin-top: -15%;
   }
   .profileImg img {
@@ -1141,8 +1141,10 @@ header {
 
   .profileImg {
     margin-top: -5rem;
+    width: calc(10vw + 10vh);
+    height: calc(10vw + 10vh);
   }
-  .profileImg video {
+  .profileImg video, .profileImg img {
     height: 200px;
     width: 200px;
   }

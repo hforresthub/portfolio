@@ -53,7 +53,7 @@ MEDIA QUERIES
 		height: 80%;
 	}
 	.profileImg {
-		width: calc(10vw + 10vh);
+		// width: calc(10vw + 10vh);
 		margin-top: -15%;
 		img {
 			box-shadow: -7.5px 7.5px 0 $accentColor;
@@ -100,7 +100,9 @@ MEDIA QUERIES
 	}
 	.profileImg {
 		margin-top: -5rem;
-		video {
+		width: calc(10vw + 10vh);
+		height: calc(10vw + 10vh);
+		video, img {
 			height: 200px;
 			width: 200px;
 		}

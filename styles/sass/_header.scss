@@ -28,7 +28,8 @@ h2::after {
 	cursor: pointer;
 }
 .profileImg {
-	width: calc(10vw + 10vh);
+	width: calc(15vw + 15vh);
+	height: calc(15vw + 15vh);
 	margin-top: -10rem;
 	z-index: 1;
 	img, video {
