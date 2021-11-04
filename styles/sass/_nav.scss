@@ -67,3 +67,64 @@ nav ul li .navButton::before {
 	height: 1px;
 	display: inline-block;
 }
+nav button.darkMode {
+	height: 20px;
+	width: 40px;
+	border-radius: 16px;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 1px;
+		left: 1px;
+		font-size: 0px;
+		padding: 1px;
+		margin: 0;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: green;
+		animation: colorChangeDark 1s ease;
+	}
+}
+.light nav button.darkMode {
+	height: 20px;
+	width: 40px;
+	border-radius: 16px;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 1px;
+		left: 21px;
+		font-size: 0px;
+		padding: 1px;
+		margin: 0;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: white;
+		animation: colorChangeLight 1s ease;
+	}
+}
+
+@keyframes colorChangeLight {
+	0% {
+		background-color: green;
+		left: 1px;
+	}
+	100% {
+		background-color: white;
+		left: 20px;
+	}
+}
+@keyframes colorChangeDark {
+	0% {
+		background-color: white;
+		left: 20px;
+	}
+	100% {
+		background-color: green;
+		left: 1px;
+	}
+}
