@@ -109,6 +109,14 @@ MEDIA QUERIES
 	} 
 }
 @media (max-width: 400px) {
+	.darkModeToggleWrapper span {
+		// display: none;
+	}
+	.navButton {
+		span {
+			font-size: 0.5rem;
+		}
+	} 
 	h3, .project h4 {
 		font-size: 1rem;
 	}
