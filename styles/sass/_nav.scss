@@ -67,9 +67,18 @@ nav ul li .navButton::before {
 	height: 1px;
 	display: inline-block;
 }
+nav ul li.darkModeToggleLi {
+	// display: flex;
+	// flex-direction: column;
+	// align-items: space-around;
+}
+.navButton button {
+	height: 100%;
+}
 nav button.darkMode {
 	height: 20px;
 	width: 40px;
+	margin: 0;
 	border-radius: 16px;
 	position: relative;
 	&::before {
@@ -90,6 +99,7 @@ nav button.darkMode {
 .light nav button.darkMode {
 	height: 20px;
 	width: 40px;
+	margin: 0;
 	border-radius: 16px;
 	position: relative;
 	&::before {
