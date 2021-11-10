@@ -7,6 +7,9 @@ app.skillsEl = document.querySelector('.skillsButton')
 app.projectsEl = document.querySelector('.projectsButton')
 app.contactEl = document.querySelector('.contactButton')
 app.mainContentEls = document.querySelectorAll('main .wrapper')
+app.darkModeToggleEl = document.querySelector('.darkMode')
+app.htmlEl = document.querySelector('html')
+
 
 // namespace functions
 app.navigateTo = (event, goTo) => {
@@ -79,6 +82,14 @@ app.init = function() {
 			document.querySelector('.' + curButton + 'Button').classList.add('currentButton')
 		} else if (document.activeElement.firstChild) {
 			window.location.assign(document.activeElement.firstChild.href)
+		}
+	})
+	app.darkModeToggleEl.addEventListener('click', (event) => {
+		if (app.htmlEl.classList.contains('light'))
+		{
+			app.htmlEl.classList.remove('light')
+		} else {
+			app.htmlEl.classList.add('light')
 		}
 	})
 }

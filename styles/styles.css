@@ -696,6 +696,91 @@ nav ul li .navButton::before {
   display: inline-block;
 }
 
+nav button.darkMode {
+  height: 20px;
+  width: 40px;
+  border-radius: 16px;
+  position: relative;
+}
+nav button.darkMode::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  font-size: 0px;
+  padding: 1px;
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: green;
+  -webkit-animation: colorChangeDark 1s ease;
+          animation: colorChangeDark 1s ease;
+}
+
+.light nav button.darkMode {
+  height: 20px;
+  width: 40px;
+  border-radius: 16px;
+  position: relative;
+}
+.light nav button.darkMode::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 21px;
+  font-size: 0px;
+  padding: 1px;
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-animation: colorChangeLight 1s ease;
+          animation: colorChangeLight 1s ease;
+}
+
+@-webkit-keyframes colorChangeLight {
+  0% {
+    background-color: green;
+    left: 1px;
+  }
+  100% {
+    background-color: white;
+    left: 20px;
+  }
+}
+
+@keyframes colorChangeLight {
+  0% {
+    background-color: green;
+    left: 1px;
+  }
+  100% {
+    background-color: white;
+    left: 20px;
+  }
+}
+@-webkit-keyframes colorChangeDark {
+  0% {
+    background-color: white;
+    left: 20px;
+  }
+  100% {
+    background-color: green;
+    left: 1px;
+  }
+}
+@keyframes colorChangeDark {
+  0% {
+    background-color: white;
+    left: 20px;
+  }
+  100% {
+    background-color: green;
+    left: 1px;
+  }
+}
 /* =================================================
 HEADER
 ================================================= */
@@ -1019,6 +1104,130 @@ button:hover {
   color: #c3dfcd;
 }
 
+html.light {
+  background: #e9ffed;
+}
+
+.light body {
+  background: linear-gradient(-45deg, #d4ffdb 0%, #e9ffed 100%);
+}
+.light .container,
+.light body {
+  color: #2e312e;
+  background: none;
+}
+.light nav ul,
+.light .headerCard,
+.light main .wrapper {
+  background-color: #b7fdbd;
+}
+.light a,
+.light .navButton,
+.light .navButton i,
+.light a i {
+  color: #2a3a30;
+}
+.light li:hover > .navButton > i,
+.light li:hover > .navButton,
+.light li:hover > a > i,
+.light li:hover > a,
+.light .currentButton,
+.light .currentButton i {
+  color: #008031;
+}
+.light .currentButton,
+.light .currentButton i {
+  text-shadow: 1px 1px 4px #e9ffed, -1px 1px 4px #e9ffed, 1px -1px 4px #e9ffed, -1px -1px 4px #e9ffed;
+}
+.light .project h4::before,
+.light nav ul li .navButton::before {
+  background: radial-gradient(ellipse at top, #7eff93 0%, #b7fdbd 80%);
+}
+.light h3::before {
+  background: linear-gradient(135deg, #00772e49, white);
+}
+.light h3::after,
+.light .project::before {
+  background: radial-gradient(ellipse at top, #7eff93 0%, #b7fdbd 80%);
+}
+.light footer {
+  text-shadow: 2px 2px 2px #008031, -2px 2px 14px #008031, 2px -2px 14px #008031, -2px -2px 14px #008031;
+}
+.light .headerCard {
+  background-color: #a7ffab;
+  -webkit-box-shadow: -1rem -1rem 0 #bcffb9a4;
+          box-shadow: -1rem -1rem 0 #bcffb9a4;
+}
+.light h2 {
+  color: #00ad42;
+}
+.light h2::after {
+  background: radial-gradient(ellipse at top, #57775b 0%, #a7ffab 80%);
+}
+.light .profileImg img,
+.light .profileImg video {
+  border: 4px solid #b7fdbd;
+  -webkit-box-shadow: -15px 15px 0 #00772e49;
+          box-shadow: -15px 15px 0 #00772e49;
+}
+.light .backImgContainer::before, .light .backImgContainer::after {
+  background-color: #a7ffab;
+}
+.light main {
+  background-color: #b7fdbd;
+}
+.light main .wrapper {
+  scrollbar-color: #008031 #b7fdbd;
+}
+.light main .wrapper::-webkit-scrollbar-thumb {
+  background-color: #2a3a30;
+}
+.light main .wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #008031;
+}
+.light .project > a img {
+  border: 3px solid #2a3a30;
+}
+.light .project > a img:hover {
+  border: 3px solid #008031;
+}
+.light .project h4::before {
+  background: linear-gradient(135deg, #00772e49, rgba(0, 0, 0, 0));
+}
+.light .project .links a:hover i,
+.light .project .links a:hover span {
+  color: #008031;
+}
+.light .skillsContent li:hover {
+  color: #2a3a30;
+}
+.light .boxAnimation1,
+.light .boxAnimation2,
+.light .boxAnimation3,
+.light .boxAnimation4,
+.light .boxAnimation5,
+.light .boxAnimation6 {
+  background: #bcffb9a4;
+}
+.light label {
+  color: #2e312e;
+  background-color: #b7fdbd;
+}
+.light input,
+.light textarea {
+  color: #2a3a30;
+  background-color: #e9ffed;
+}
+.light button {
+  background: #2a3a30;
+  color: #b7fdbd;
+}
+.light button:hover {
+  background: #008031;
+  border-color: #008031;
+  color: #2a3a30;
+}
+
 /* =================================================
 MEDIA QUERIES
 ================================================= */
@@ -1051,18 +1260,15 @@ MEDIA QUERIES
 
   html {
     overflow-y: scroll;
-    scrollbar-color: #00ad42 #30323b;
     scrollbar-width: thin;
   }
   html::-webkit-scrollbar {
     width: 5px;
   }
   html::-webkit-scrollbar-thumb {
-    background-color: #c3dfcd;
     border-radius: 20px;
   }
   html::-webkit-scrollbar-thumb:hover {
-    background-color: #00ad42;
     border-radius: 20px;
   }
 
@@ -1086,11 +1292,6 @@ header {
   .profileImg {
     margin-top: -15%;
   }
-  .profileImg img {
-    -webkit-box-shadow: -7.5px 7.5px 0 #00ad4249;
-            box-shadow: -7.5px 7.5px 0 #00ad4249;
-  }
-
   main {
     width: 70%;
     border-radius: 0 0 6px 6px;
@@ -1120,7 +1321,6 @@ header {
 
   nav ul li::before {
     content: "";
-    background: radial-gradient(ellipse at top, #444a5e 0%, #30323b 80%);
     height: 100px;
     width: 1px;
     display: inline-block;
