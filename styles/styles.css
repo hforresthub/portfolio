@@ -696,9 +696,14 @@ nav ul li .navButton::before {
   display: inline-block;
 }
 
+.navButton button {
+  height: 100%;
+}
+
 nav button.darkMode {
   height: 20px;
   width: 40px;
+  margin: 0;
   border-radius: 16px;
   position: relative;
 }
@@ -721,6 +726,7 @@ nav button.darkMode::before {
 .light nav button.darkMode {
   height: 20px;
   width: 40px;
+  margin: 0;
   border-radius: 16px;
   position: relative;
 }
@@ -1113,7 +1119,7 @@ html.light {
 }
 .light .container,
 .light body {
-  color: #2e312e;
+  color: #242524;
   background: none;
 }
 .light nav ul,
@@ -1125,7 +1131,7 @@ html.light {
 .light .navButton,
 .light .navButton i,
 .light a i {
-  color: #2a3a30;
+  color: #2c4636;
 }
 .light li:hover > .navButton > i,
 .light li:hover > .navButton,
@@ -1180,13 +1186,13 @@ html.light {
   scrollbar-color: #008031 #b7fdbd;
 }
 .light main .wrapper::-webkit-scrollbar-thumb {
-  background-color: #2a3a30;
+  background-color: #2c4636;
 }
 .light main .wrapper::-webkit-scrollbar-thumb:hover {
   background-color: #008031;
 }
 .light .project > a img {
-  border: 3px solid #2a3a30;
+  border: 3px solid #2c4636;
 }
 .light .project > a img:hover {
   border: 3px solid #008031;
@@ -1199,7 +1205,7 @@ html.light {
   color: #008031;
 }
 .light .skillsContent li:hover {
-  color: #2a3a30;
+  color: #2c4636;
 }
 .light .boxAnimation1,
 .light .boxAnimation2,
@@ -1210,22 +1216,22 @@ html.light {
   background: #bcffb9a4;
 }
 .light label {
-  color: #2e312e;
+  color: #242524;
   background-color: #b7fdbd;
 }
 .light input,
 .light textarea {
-  color: #2a3a30;
+  color: #2c4636;
   background-color: #e9ffed;
 }
 .light button {
-  background: #2a3a30;
+  background: #2c4636;
   color: #b7fdbd;
 }
 .light button:hover {
   background: #008031;
   border-color: #008031;
-  color: #2a3a30;
+  color: #2c4636;
 }
 
 /* =================================================

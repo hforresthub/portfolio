@@ -31,8 +31,13 @@
 		<header>
 			<div class="wrapper">
 				<nav>
-					<button class="darkMode"> </button>
 					<ul class="navBar">
+						<li role="button" tabIndex=0 class="darkModeToggleLi">
+							<div class="navButton darkModeToggleWrapper">
+								<button class="darkMode"></button>
+								<span>Dark/Light</span>
+							</div>
+						</li>
 						<li role="button" tabindex=0 class="about">
 							<div class="navButton aboutButton"><i class="fas fa-address-card"
 									aria-hidden="true"></i><span>About</span></div>
@@ -202,7 +207,7 @@
 					</label>
 					<label>
 						Your message:
-						<textarea name="message" placeholder="Please write your message here" ></textarea>
+						<textarea name="message" placeholder="Please write your message here"></textarea>
 					</label>
 					<!-- your other form fields go here -->
 					<button type="submit">Send</button>
