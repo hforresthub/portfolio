@@ -95,6 +95,15 @@ a:hover {
 footer {
 	text-align: center;
 	margin-top: 1%;
-	text-shadow: 2px 2px 2px $primaryColor, -2px 2px 14px $primaryColor,
-	2px -2px 14px $primaryColor, -2px -2px 14px $primaryColor, ;
+	padding: 2%;
+	border-radius: 6px 6px 0 0;
+	background-color: $quaternaryColor;
+	color: $primaryColor;
+	width: 60%;
+	align-self: center;
+	p {
+		font-family: "Poppins", sans-serif;
+		font-size: 1rem;
+		font-weight: 800;
+	}
 }

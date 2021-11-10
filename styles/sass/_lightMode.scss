@@ -46,9 +46,9 @@ html.light {
 		background: radial-gradient(ellipse at top, $septenaryColorLight 0%, $quaternaryColorLight 80%);
 	}
 	footer {
-		text-shadow: 2px 2px 2px $primaryColorLight, -2px 2px 14px $primaryColorLight, 2px -2px 14px $primaryColorLight,
-			-2px -2px 14px $primaryColorLight;
-	}
+		background-color: $quaternaryColorLight;
+		color: $primaryColorLight;
+	}	
 	.headerCard {
 		background-color: $quinaryColorLight;
 		box-shadow: -1rem -1rem 0 $tertiaryColorTransparentLight;
