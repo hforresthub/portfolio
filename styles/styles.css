@@ -1368,6 +1368,12 @@ header {
             box-shadow: -5px 5px 0 #00ad4249;
   }
 
+  .light .profileImg img,
+.light .profileImg video {
+    -webkit-box-shadow: -5px 5px 0 #00772e49;
+            box-shadow: -5px 5px 0 #00772e49;
+  }
+
   .backImgContainer::before {
     height: 50%;
     bottom: -15vh;
